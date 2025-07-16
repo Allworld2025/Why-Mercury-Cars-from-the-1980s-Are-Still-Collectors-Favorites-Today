@@ -1,0 +1,212 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fafb;
+    color: #111827;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #6b7280, #d1d5db);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.2rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0.7rem 0;
+    opacity: 0.85;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #374151;
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 2.2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.15rem;
+}
+
+ul li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    color: #f59e0b;
+    font-size: 1.4rem;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.car-card {
+    background: #f3f4f6;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.car-card:hover {
+    background: #fef3c7;
+    transform: scale(1.05);
+}
+
+.car-card h3 {
+    margin: 0.7rem 0;
+    color: #374151;
+    font-size: 1.6rem;
+}
+
+blockquote {
+    background: #f9fafb;
+    border-left: 6px solid #f59e0b;
+    padding: 1.5rem 2rem;
+    margin: 1.8rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+.faq-item {
+    margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    margin: 0.7rem 0;
+    color: #374151;
+}
+
+a {
+    color: #f59e0b;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d97706;
+    text-decoration: underline;
+}
+
+.call-to-action {
+    text-align: center;
+    background: #f59e0b;
+    color: white;
+    padding: 3rem;
+    border-radius: 16px;
+}
+
+.call-to-action h2 {
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #374151;
+    color: white;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.9rem;
+    }
+
+    .car-card {
+        padding: 1.5rem;
+    }
+
+    .car-card h3 {
+        font-size: 1.4rem;
+    }
+}
